@@ -1,0 +1,351 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body,html{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+body{
+  font-family: Trebuchet MS, Helvetica;
+}
+/* стили для меню */
+header{
+  background-color:#481666;
+  text-align: center;
+  width:100%;
+  padding: 10px 0.5% 0px 0.5%;
+  float:left;
+  position: fixed;
+}
+/* мое портфолио */
+header #logo{
+  width: 100%;
+  float: center;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Ubuntu' serif;
+}
+header #logo span{
+  font-size: 1.7em;
+  line-height: 45px;
+}
+/* мобильность */
+@media(min-width:701px){
+  #logo{
+    float: left;
+    width: 30%;
+    font-size: 1.1em;
+}
+  #about{
+      float: right;
+      width: 67%;
+    }
+}
+@media(max-width:700px){
+  #logo{
+    margin-top: 15px;
+    width: 100%;
+    font-size: 1.5em;
+  }
+  #about{
+    float: left;
+    width: 100%;
+  }
+}
+
+#about{
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 40px;
+  margin-bottom: 10px;
+  float: center;
+  width: 100%;
+}
+
+#about>a{
+  color: #fafafa;
+  text-decoration:none;
+  float: center;
+}
+
+#about a:hover{
+  border-bottom: 2px solid #a61212;
+padding-bottom: 2px;
+color: red;
+}
+#about>a:not(:last-child){
+  margin-right: 7%;
+}
+
+/* Стили для фиксированной шапки */
+.fixed{
+  z-index: 5000;
+  background-color: #200d38;
+  border-bottom: 1px solid silver;
+}
+header.fixed#logo{
+    color: #333;
+}
+.fixed #about a{  color: #fff;}
+.fixed #about a:hover{  color: #a61212;}
+
+
+/* Главный блок на сайте */
+#top{
+  width: 100%;
+  height: 1000px;
+  background-image: url(https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-blend-mode: multiply;
+  background-color: #808080;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+}
+@media (min-width:1001px) {
+  #top{
+    font-size: 3em;
+  }
+}
+
+@media (max-width:1000px) {
+  #top{
+    font-size: 2em;
+  }
+}
+@media (max-width:700px) {
+  #top{
+    font-size: 1.7em;
+  }
+  #top h1{
+    padding-top: 60%!important;
+  }
+}
+#top h1{
+  padding-top: 20%;
+}
+
+/* About page  */
+#more{
+  padding-top: 10%;
+  background: #8287b5;
+  float: left;
+  border-top: 2px solid silver;
+  color: #333;
+  font-size: 2em;
+  padding-bottom: 10%;
+  background-attachment: fixed;
+
+}
+#more div{
+  width: 40%;
+  float: left;
+}
+ #more .img_more img{
+   padding-top: 25%;
+  width:70%;
+  margin-left: 20%;
+  max-width: 600px;
+}
+#more div:last-child{
+  margin-left: 10%;
+}
+#more .text{
+  float: left;
+}
+#more .text h2{
+  margin-bottom: 15%;
+}
+/* обо мне */
+#about_me{
+  border-top: 2px solid silver;
+  color: #fafafa;
+  background-image: url(https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-blend-mode: multiply;
+  background-color: #729df2;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#about_me{
+  float: left;
+  width: 100%;
+  padding-top: 100px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+#about_me h2{
+  margin-bottom: 5%;
+  font-size: 3em;
+}
+#about_me span{
+  float: left;
+  margin-left: 10%;
+  font-size: 1.5em;
+  width: 80%;
+}
+
+
+/* проекты */
+#projects{
+  background-image: url(https://images.pexels.com/photos/1102797/pexels-photo-1102797.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  border-top: 2px solid silver;
+  float:left;
+  background-blend-mode: multiply;
+  background-color: #481666;
+  background-size: cover;
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+#projects h2{font-size: 3em;}
+#projects .img{
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+  margin-top: 50px;
+
+}
+#projects .img img{
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  border: 3px solid silver;
+}
+#projects .img:nth-child(odd){
+  margin-left: 18%;
+}
+#projects .img{
+  position: relative;
+  width: 30%;
+  height: 30%;
+  background:#000;
+  display: block;
+  transition: transform .2s linear;
+}
+#projects .img:hover img{
+  opacity: 0.4;
+  filter: blur(3px);
+  transition: opacity 0.1s linear;
+}
+#projects .img:hover img{
+  border: none;
+  transform: translate3d(-10px, -10px, 0);
+}
+#projects .img:hover .proj_text{
+  opacity: 1;
+}
+#projects .proj_text{
+  width: 100%;
+  opacity: 0;
+  color: #fff;
+  font-size: 1.3em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  transform: translate3d(0,-40%,0);
+}
+
+/* contact me */
+#contact{
+  color: #fafafa;
+  width: 100%;
+  float: left;
+  padding-bottom: 40px;
+  padding-top: 70px;
+  border-top: 4px solid #ccc;
+  background: #1a0052;
+}
+#contact h1{
+  font-size:3em;
+  color: #fafafa;
+}
+#form_input{
+    float: left;
+    margin-top: 15px;
+    width: 40%;
+    margin-left: 10%;
+    font-size: 1.3em;
+}
+#form_input input{
+  margin-bottom: 10px;
+  width: 40%;
+  padding: 10px 2%;
+  border: 2px solid silver;
+  font-size: 0.9em;
+  color: #4a4a4a;
+}
+#form_input input:focus, #form_input textarea{
+  border-color: #333;
+}
+.btn{
+  float: left;
+  padding: 5px 9px;
+  font-size: 1.2em;
+  background-color: #eeedf0;
+  cursor: pointer;
+  color:#333;
+}
+.btn:hover{
+  background-color: #c15443;
+}
+#form_input #butt:hover{
+  background-color: #c15443;
+}
+#second{
+  float: right;
+  margin-top: 15px;
+  width: 40%;
+  margin-right: 10%;
+  font-size: 1.3em;
+}
+#second input{
+  margin-bottom: 10px;
+  width: 40%;
+  padding: 10px 2%;
+  border: 2px solid silver;
+  font-size: 0.9em;
+  color: #4a4a4a;
+}
+#second input:first-child{
+  float: left;
+  margin-left: 0;
+  width: 3%;
+}
+#second label{
+  float: left;
+}
+#second #butt{
+  float: left;
+  padding: 5px 9px;
+  font-size: 1.2em;
+  background-color: #eeedf0;
+  cursor: pointer;
+  color:#333;
+}
+#second #butt:last-child{
+  margin-left: 5%;
+}
+#second #butt:hover{
+  background-color: #c15443;
+}
+#second  #ChBox{
+  background-color: #fff;
+  float: left;
+  color: black;
+}
+/* соц сети */
+footer{
+  width: 100%;
+  background-color: #1a0052;
+}
+
+footer .socmedia img{
+  margin-right: 5%;
+  float: right;
+}
