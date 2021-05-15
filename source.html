@@ -11,7 +11,142 @@
   </head>
   <body onload="generateCaptcha()">
     <header>
+        <div id="logo" onclick="slowScroll('#top')"><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets\style.css">
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto+Slab|Ubuntu&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+  </head>
+  <body onload="generateCaptcha()">
+    <header>
         <div id="logo" onclick="slowScroll('#top')">
+            <span>Моё Портфолио</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Подробнее о сайте" onclick="slowScroll('#more')">Подробнее о сайте</a>
+            <a href="#" onclick="slowScroll('#about_me')" title="Обо мне">Обо мне</a>
+            <a href="#"  onclick="slowScroll('#projects')" title="Проекты">Проекты</a>
+            <a href="#"  onclick="slowScroll('#contact')" title="Контакты">Контакты</a>
+        </div>
+    </header>
+    <!-- начальная страница -->
+    <div id="top">
+        <h1>Welcome on my website!</h1>
+    </div>
+
+    <!-- подробнее о сайте -->
+    <div id="more">
+          <div class="img_more">
+              <img src="https://www.wmenu.com/images/laptop-tablet-phone-pc.png" alt="">
+          </div>
+        <div class="text">
+          <h2>Подробнее о сайте</h2>
+          <span>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, dolor
+      odit quisquam in delectus? Suscipit error magni maiores rem dolor cupiditate maxime Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Voluptatibus sequi explicabo temporibus ducimus magni velit reiciendis pariatur necessitatibus optio cupiditate nulla
+      laboriosam ipsam adipisci laborum at qui vel, quos eaque!
+      recusandae quo voluptate, hic, aspernatur odio possimus voluptatem assumenda! Fugit libero, sit inventore
+      saepe, explicabo, temporibus fuga placeat cupiditate sapiente error deserunt, quaerat adipisci molestias voluptatibus tenetur? Laborum sed sint, eum suscipit ratione dicta,
+      voluptate reiciendis aliquid repellat nemo. Accusantium repellat aut exercitationem non eos et tenetur temporibus, incidunt nesciunt totam rem hic recusandae sint quis voluptate eligendi! Tempora esse ea nobis
+      distinctio animi sunt. Debitis sed quod unde facilis natus porro minus doloremque, saepe voluptatem. Similique, quidem.
+          </span>
+        </div>
+    </div>
+<!-- about me -->
+<div id="about_me">
+    <h2>Обо мне</h2>
+        <span>
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, dolor
+      odit quisquam in delectus? Suscipit error magni maiores rem dolor cupiditate maxime Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Voluptatibus sequi explicabo temporibus ducimus magni velit reiciendis pariatur necessitatibus optio cupiditate nulla
+      laboriosam ipsam adipisci laborum at qui vel, quos eaque!
+      recusandae quo voluptate, hic, aspernatur odio possimus voluptatem assumenda! Fugit libero, sit inventore
+      saepe, explicabo, temporibus fuga placeat cupiditate sapiente error deserunt, quaerat adipisci molestias voluptatibus tenetur? Laborum sed sint, eum suscipit ratione dicta,
+      voluptate reiciendis aliquid repellat nemo. Accusantium repellat aut exercitationem non eos et tenetur temporibus, incidunt nesciunt totam rem hic recusandae sint quis voluptate eligendi! Tempora esse ea nobis
+      distinctio animi sunt. Debitis sed quod unde facilis natus porro minus doloremque, saepe voluptatem. Similique, quidem.
+        </span>
+</div>
+    <!-- Проекты -->
+    <div id="projects">
+        <h2>Проекты</h2>
+        <div class="all_img">
+            <div class="img">
+                <img src="swing.jpg" alt="">
+                <div class="proj_text">Пример UI приложения</div>
+
+            </div>
+
+            <div class="img">
+                <img src="SlovaC++.jpg" alt="">
+                <div class="proj_text">
+                  Cчитает количество слов с гласных букв
+                </div>
+            </div>
+            <div class="img">
+                <img src="graphJava.jpg" alt="">
+                <div class="proj_text">Рисует график в окне</div>
+
+            </div>
+            <div class="img">
+                <img src="bubleSortC++.jpg" alt="">
+                <div class="proj_text">Сортировка массива пузырьком</div>
+
+            </div>
+        </div>
+    </div>
+<!-- contact me section -->
+<div id="contact">
+  <center><h1>Контакты</h1></center>
+  <form id="form_input" name="form1">
+          <label for="name">Имя</label><br>
+          <input type="text" placeholder="введите имя" name="name" id="name"><br>
+          <input type="text" placeholder="введите ваше сообщение" name="message" id="message"><br>
+          <div id="mess_send" onclick="newPage()"class="btn">Отправить</div>
+  </form>
+
+    <form id="second" name="form2">
+      <input type="checkbox" id="ChBox"disabled> Не робот<br>
+          <input type="text" id="captcha" size="7" disabled/>
+          <br>
+          <input type="text" size="7"id="inputText"><br>
+          <div id="butt" name="submit" onclick="check()">Подтвердить</div>
+          <div id="butt" onclick="generateCaptcha()">Обновить</div>
+    </form>
+    <footer>
+      <div class="socmedia">
+         <a href="https://vk.com"><img src="https://smajlik.ru/wp-content/uploads/2017/12/2.png" width="4%"alt=""></a>
+         <a href="https://instagram.com">  <img src="https://www.freepngimg.com/thumb/logo/62372-computer-neon-instagram-icons-hd-image-free-png.png" width="4%"alt=""></a>
+         <a href="https://github.com">  <img src="http://pngimg.com/uploads/github/github_PNG40.png"width="4%" alt=""></a>
+       </div>
+    </footer>
+</div>
+
+
+<!-- добавляем Jquery для плавной прокрутки и остальных фич -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      function slowScroll(id){
+        $('html,body').animate({
+          scrollTop: $(id).offset().top
+        },500)
+      }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop()<=15)
+        $("header").removeClass("fixed");
+      else
+          $("header").attr("class","fixed");
+    });
+    </script>
+  </body>
+</html>
+
             <span>Моё Портфолио</span>
         </div>
         <div id="about">
